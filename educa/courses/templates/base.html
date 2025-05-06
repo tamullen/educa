@@ -23,14 +23,19 @@
 				{% endif %}
 			</ul>
 		</div>
-		{% block content %}
+		<div id="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+		{% block include_js %}
+
 		{% endblock %}
 		<script>
-			document.addEventListener('DomContentLoaded', (event) => {
+			document.addEventListener('DOMContentLoaded', (event) => {
                 {% block domready %}
                 	
                 {% endblock %}
-			})
+			});
 		</script>
 	</body>
 </html>
